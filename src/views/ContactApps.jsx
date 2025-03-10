@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Loading from "../components/Loading";
 
 // action
 import getAllContact from '../redux/action/getAllContact';
@@ -21,11 +22,7 @@ export default function ContactApps() {
                 <div className="row">
                     {
                         loading ?
-                        <div className="d-flex justify content center mt-5">
-                            <div className="spinner-border" role="status">
-                                <span className="visually-hidden">Loading ...</span>
-                            </div>
-                        </div>
+                        <Loading />
                         :
                         contacts.lenght === 0 ?
                         <div className="text-center m-2 p-4">Data Not Found</div>
