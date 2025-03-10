@@ -3,9 +3,11 @@ import { thunk } from "redux-thunk";
 
 // reducers
 import loadingReducer from './reducers/loading';
+import contactReducer from "./reducers/contact";
 
 const reducers = combineReducers({
-    loadingReducer
+    loadingReducer,
+    contactReducer
 });
 
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
