@@ -1,0 +1,12 @@
+{
+    "contacts": [
+        {
+            "name":"dodi ar",
+            "email":"dodi@gmail.com",
+            "phonenumber":"0812345467",
+            "category":"family",
+            "id":1
+
+        }
+    ]
+}
