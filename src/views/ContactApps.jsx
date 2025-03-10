@@ -4,6 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 // action
 import getAllContact from '../redux/action/getAllContact';
 
+// components
+import CardContact from "../components/CardContact";
+
 export default function ContactApps() {
     const dispatch = useDispatch();
     const loading = useSelector(state=>state.loadingReducer.loading);
@@ -29,15 +32,8 @@ export default function ContactApps() {
                         :
                         contacts.map(contact=>{
                             return (
-                                <div className="col-md-3 p-1">
-                                    <div className="card shadow-sm radius">
-                                        <div className="card-body">
-                                            <h5>{contact.name}</h5>
-                                            <p>{contact.email}</p>
-                                            <p>{contact.phonenumber}</p>
-                                            <p>Category: {contact.category}</p>
-                                        </div>
-                                    </div>
+                                <div key={contact.id} className="col-md-3 p-1">
+                                    <CardContact contact={contact} />
                                 </div>
                             )
                         })
