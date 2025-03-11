@@ -1,12 +1,25 @@
 {
-    "contacts": [
-        {
-            "name":"dodi ar",
-            "email":"dodi@gmail.com",
-            "phonenumber":"0812345467",
-            "category":"family",
-            "id":1
-
-        }
-    ]
+  "contacts": [
+    {
+      "name": "dodi ar",
+      "email": "dodi@gmail.com",
+      "phonenumber": "0812345467",
+      "category": "family",
+      "id": 1
+    },
+    {
+      "name": "jono",
+      "email": "jono@gmail.com",
+      "phonenumber": "08134568994",
+      "category": "friend",
+      "id": 2
+    },
+    {
+      "name": "nandang",
+      "email": "nandang@gmail.com",
+      "phonenumber": "081722335876",
+      "category": "family",
+      "id": 3
+    }
+  ]
 }

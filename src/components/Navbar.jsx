@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import AddContact from "./AddContactForm";
 
 export default function Navbar() {
     return (
@@ -26,6 +27,9 @@ export default function Navbar() {
               <Link to="/work" className='nav-link'>Work</Link>
             </li>
           </ul>
+          <div>
+            <AddContact />
+          </div>
         </div>
       </div>
     </nav>

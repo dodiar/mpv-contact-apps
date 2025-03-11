@@ -1,4 +1,4 @@
-import { type } from "@testing-library/user-event/dist/type";
+// import { type } from "@testing-library/user-event/dist/type";
 import axios from "axios";
 import Swal from "sweetalert2";
 
