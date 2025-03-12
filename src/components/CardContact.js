@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function CardContact(props) {
     return (
@@ -9,6 +10,16 @@ export default function CardContact(props) {
                 <p>{props.contact.phonenumber}</p>
                 <p>Category: {props.contact.category}</p>
             </div>
+            {
+                props.fromDetail ?
+                ""
+                :
+                <div className="card-footer">
+                    <Link to={`/detail/${props.contact.id}`}>
+                        <button className="btn btn-dark">detail</button>
+                    </Link>
+                </div>
+            }
         </div>
     );
 }

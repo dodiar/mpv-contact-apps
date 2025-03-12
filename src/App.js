@@ -15,7 +15,7 @@ function App() {
     <Navbar />
     <Routes>
       <Route exact path='/' element={<ContactApps/>} />
-      {/* <Route exact path='/detail' element={<DetailContact/>} /> */}
+      <Route exact path='/detail/:id' element={<DetailContact/>} />
       <Route exact path='/:category' element={<CategoryContact/>} />
     </Routes>
     </>
