@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import UpdateContact from "./UpdateContactForm";
 
 export default function CardContact(props) {
     return (
@@ -14,10 +15,11 @@ export default function CardContact(props) {
                 props.fromDetail ?
                 ""
                 :
-                <div className="card-footer">
+                <div className="card-footer d-flex justify-content-around">
                     <Link to={`/detail/${props.contact.id}`}>
                         <button className="btn btn-dark">detail</button>
                     </Link>
+                    <UpdateContact idContact={props.contact.id}/>
                 </div>
             }
         </div>
