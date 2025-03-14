@@ -18,14 +18,14 @@ export default function ContactApps() {
     }, []);
     return (
         <>
-            <div className="container mt-2">
-                <div className="row">
+            <div className="container mt-2">            
                     {
                         loading ?
                         <Loading />
                         :
                         contacts.lenght === 0 ?
-                        <div className="text-center m-2 p-4">Data Not Found</div>
+                        <div className="text-center m-2 p-4 border border-white rounded">
+                            <span className="text-white">Data Not Found</span></div>
                         :
                         contacts.map(contact=>{
                             return (
@@ -34,8 +34,7 @@ export default function ContactApps() {
                                 </div>
                             )
                         })
-                    }
-                </div>
+                    }                
             </div>
         </>
     );

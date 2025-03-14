@@ -14,20 +14,20 @@ const addContact = (({user}) => {
                 category: user.category
             }
         })
-        .then((data) => {
+        .then((response) => {
             Swal.fire({
                 position: "top-end",
                 icon: "success",
-                timer: 1000,
+                timer: 3000,
                 showConfirmButton: true,
-                title: `Success add contact ${data.name}`
+                title: `Success add contact ${response.data.name}`
             })
             dispatch(getAllContact());
         }).catch((err) => {
             Swal.fire({
                 position: "top-end",
                 icon: "error",
-                timer: 1000,
+                timer: 3000,
                 showConfirmButton: false,
                 title: `${err.message} - ${err.status}`
             })

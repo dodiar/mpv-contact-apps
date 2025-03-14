@@ -19,7 +19,7 @@ const allContact = () => {
                 icon: "error",
                 title: `${err.message} ${err.status}`,
                 showCloseButton: false,
-                timer: 1000
+                timer: 3000
             })
         });
     }

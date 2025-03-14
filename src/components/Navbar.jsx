@@ -4,7 +4,7 @@ import AddContact from "./AddContactForm";
 
 export default function Navbar() {
     return (
-        <nav className='navbar navbar-expand-lg bg-body-tertiary'>
+        <nav className='navbar navbar-expand-lg navbar-dark bg-dark shadow-navbar'>
       <div className='container-fluid'>
         <Link to='/' className='navbar-brand'>Contacs Apps</Link>
         <button type='button' className='navbar-toggler' data-bs-toggle='collapse' 
@@ -18,13 +18,13 @@ export default function Navbar() {
               <Link to="/" className='nav-link'>All Contact</Link>
             </li>
             <li className='nav-item'>
-              <Link to="/family" className='nav-link'>Family</Link>
+              <Link to="/category/family" className='nav-link'>Family</Link>
             </li>
             <li className='nav-item'>
-              <Link to="/friend" className='nav-link'>Friend</Link>
+              <Link to="/category/friend" className='nav-link'>Friend</Link>
             </li>
             <li className='nav-item'>
-              <Link to="/work" className='nav-link'>Work</Link>
+              <Link to="/category/work" className='nav-link'>Work</Link>
             </li>
           </ul>
           <div>

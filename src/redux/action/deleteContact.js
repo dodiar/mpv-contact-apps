@@ -13,7 +13,7 @@ const deleteContact = (id) => {
                     position: "top-end",
                     icon: "success",
                     showConfirmButton: false,
-                    timer: 1000,
+                    timer: 3000,
                     title: "Your contact has been deleted"
                 })                
             dispatch(getAllContact())
@@ -22,7 +22,7 @@ const deleteContact = (id) => {
                 position: "top-end",
                 icon: "error",
                 showConfirmButton: false,
-                timer: 1000,
+                timer: 3000,
                 title: `${err.message} - ${err.status}`
             })
         });

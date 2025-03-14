@@ -28,14 +28,14 @@ export default function CategoryContact() {
     }, [params, contacts])
 
     return (
-        <div className="container mt-2">
-            <div className="row">
+        <div className="container mt-2">            
             {
                 loading ?
                     <Loading />
                 :
                 categoryContact.length === 0 ?
-                    <div className="text-center m-2 p-4">Data Not Found</div>
+                <div className="text-center m-2 p-4 border border-white rounded">
+                            <span className="text-white">Data Not Found</span></div>
                 :
                     categoryContact.map((contact) => {
                         return (
@@ -44,8 +44,7 @@ export default function CategoryContact() {
                             </div>
                         );
                     })
-            }
-            </div>            
+            }           
         </div>
         
     );

@@ -26,20 +26,24 @@ export default function CardContact(props) {
     }
 
     return (
-        <div className="card shadow-sm radius">
-            <div className="card-body">
-                <h5>{props.contact.name}</h5>
-                <p>{props.contact.email}</p>
-                <p>{props.contact.phonenumber}</p>
-                <p>Category: {props.contact.category}</p>
+        <div className="card mt-5 shadow-sm">
+            <div className="box">
+                <div className="content">
+                    <h2>{props.contact.id}</h2>
+                    <h3>{props.contact.name}</h3>
+                    <p>{props.contact.email}</p>
+                    <p>{props.contact.phonenumber}</p>
+                    <p>{props.contact.category}</p>
+                </div>
             </div>
+            
             {
                 props.fromDetail ?
                 ""
                 :
                 <div className="card-footer d-flex justify-content-around">
                     <Link to={`/detail/${props.contact.id}`}>
-                        <button className="btn btn-dark">detail</button>
+                        <button className="btn btn-dark">Detail</button>
                     </Link>
                     <UpdateContact idContact={props.contact.id}/>
                     <button onClick={() => DeleteContact(props.contact.id)} className="btn btn-dark">Delete</button>
